@@ -26,7 +26,20 @@ It establishes hard boundaries and enforces premium frontend standards automatic
 
 ---
 
-### 📂 How to use it
+### 💻 See the Output (Demo Application)
+Not everyone wants to run a prompt to see the result. Inside the **`example-output/`** folder, you will find a fully functional React + Vite + Tailwind + GSAP project generated entirely by this system prompt. 
+
+**To run the demo locally:**
+```bash
+cd example-output
+npm install
+npm run dev
+```
+*Notice the strict adherence to the Aesthetic Presets, the magnetic button interactions, and the GSAP scroll triggers—all dictated strictly by the LLM architecture without human intervention.*
+
+---
+
+### 📂 How to use the Generator
 1. Copy the contents of `system-prompt.md`.
 2. Paste it as a System Instruction in your LLM of choice (Claude 3.5 Sonnet or GPT-4o work best), or use it as a `.cursorrules` file in Cursor.
 3. The AI will immediately ask you 4 strategic questions (Brand Name, Preset, Value Props, CTA).

@@ -1,0 +1,167 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: #111111;
+  background: #f5f3ee;
+  font-synthesis: none;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  overflow-x: hidden;
+  background: #f5f3ee;
+}
+
+body::before {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  pointer-events: none;
+  content: "";
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+  mix-blend-mode: multiply;
+}
+
+::selection {
+  color: #f5f3ee;
+  background: #e63b2e;
+}
+
+.magnetic-btn {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  transition:
+    transform 420ms cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    color 420ms cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    border-color 420ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.magnetic-btn:hover {
+  transform: scale(1.03);
+}
+
+.magnetic-btn .magnetic-fill {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  transform: translateY(102%);
+  transition: transform 460ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.magnetic-btn:hover .magnetic-fill {
+  transform: translateY(0);
+}
+
+.lift-link {
+  transition:
+    transform 260ms cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    opacity 260ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.lift-link:hover {
+  transform: translateY(-1px);
+}
+
+.hero-gradient {
+  background:
+    linear-gradient(0deg, rgba(17, 17, 17, 0.92) 0%, rgba(17, 17, 17, 0.58) 45%, rgba(232, 228, 221, 0.14) 100%),
+    linear-gradient(90deg, rgba(17, 17, 17, 0.84) 0%, rgba(17, 17, 17, 0.2) 60%);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+@keyframes cursor-blink {
+  0%,
+  45% {
+    opacity: 1;
+  }
+  46%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes pulse-dot {
+  0%,
+  100% {
+    opacity: 0.45;
+    transform: scale(0.9);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+}
+
+@keyframes path-pulse {
+  from {
+    stroke-dashoffset: 220;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes scanner {
+  0%,
+  100% {
+    transform: translateY(12%);
+  }
+  50% {
+    transform: translateY(82%);
+  }
+}
+
+@keyframes cursor-route {
+  0% {
+    opacity: 0;
+    transform: translate(18px, 24px) scale(0.92);
+  }
+  18% {
+    opacity: 1;
+    transform: translate(96px, 70px) scale(1);
+  }
+  38% {
+    opacity: 1;
+    transform: translate(154px, 70px) scale(0.96);
+  }
+  52% {
+    opacity: 1;
+    transform: translate(154px, 70px) scale(1);
+  }
+  76% {
+    opacity: 1;
+    transform: translate(214px, 158px) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(214px, 158px) scale(0.92);
+  }
+}
+
+.scheduler-cursor {
+  animation: cursor-route 4.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+}
+
+.wave-path {
+  stroke-dasharray: 220;
+  animation: path-pulse 2.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite alternate;
+}
