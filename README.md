@@ -1,3 +1,6 @@
+> 💡 **Portfolio Note:** *This tool was originally developed internally in Q4 2025. It has been cleaned of sensitive data, API keys, and internal business logic, and published here as a showcase of my technical stack.*
+
+
 # 🎬 AI Cinematic Landing Page Generator (System Prompt Architecture)
 
 **A highly structured Prompt Engineering framework that forces LLMs to act as Senior Creative Technologists. It bypasses generic AI output and reliably generates pixel-perfect, GSAP-animated React landing pages.**
